@@ -12,6 +12,9 @@
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -36,7 +39,7 @@
                     <a class="btn btn-sm btn-warning" href="{% url 'login' %}">Login</a> &nbsp;
                     <a class="btn btn-sm btn-outline-secondary" href="{% url 'register' %}">Register</a>
                     {% else %}
-                    <span>You're logged in as {{user}}</span>
+                    <span><a href="{% url 'dashboard' %}">Dashboard</a></span>
                     &emsp;
                     <span><a href="{% url 'logout' %}">Logout</a></span>
                     {% endif %}
